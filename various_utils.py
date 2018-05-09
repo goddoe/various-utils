@@ -33,14 +33,9 @@ def load_from_pickle(path, opt="rb"):
         return pickle.load(f)
 
 
-def load_from_json_file(path=None):
-    if path:
-        with open(path, "rt") as f:
-            param_dict = json.load(f)
-    else:
-        raise Exception("There is no param_path")
-
-    return param_dict
+def load_from_json_file(path):
+    with open(path, "rt") as f:
+        return json.load(f)
 
 
 def get_date_time_prefix():
